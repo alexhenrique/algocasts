@@ -3,8 +3,31 @@
 // commonly used in the string.
 // --- Examples
 // maxChar("abcccccccd") === "c"
-// maxChar("apple 1231111") === "1"
+// maxChar("apple 1211311") === "1"
 
-function maxChar(str) {}
+function maxChar(str) {
+  let regcont = {};
+  for (let i = 0; i < str.length; i++) {
+    if (!regcont[str[i]]) {
+      regcont[str[i]] = 1;
+    } else {
+      regcont[str[i]] += 1;
+    }
+  }
+  let mais = [0,0];
+  let i = 0;
+  for (const key in regcont) {
+    if (i == 0){
+        mais = [key, regcont[key]]
+        i = 1;
+    }
+    else if (regcont[key] > mais[1] ){
+        mais = [key,regcont[key]]
+    }
+  }
+  return mais[0];
+}
+
+// console.log(maxChar("fvfvfvfvcvcvbvbv")); 
 
 module.exports = maxChar;
