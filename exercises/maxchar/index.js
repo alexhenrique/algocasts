@@ -28,6 +28,6 @@ function maxChar(str) {
   return mais[0];
 }
 
-// console.log(maxChar("fvfvfvfvcvcvbvbv")); 
+console.log(maxChar("fvfvfvfvcvcvbvbv")); 
 
-module.exports = maxChar;
+// module.exports = maxChar;
