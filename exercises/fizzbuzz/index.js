@@ -31,11 +31,11 @@
 
 function fizzBuzz(n) {
     for (let i = 1; i <= n; i++) {
-        const tres = i % 3;
+        const tres3 = i % 3;
         const cinc = i % 5;
-        if (!tres && !cinc) {
+        if (!tres3 && !cinc) {
         console.log('fizzbuzz');
-      } else if (!tres) {
+      } else if (!tres3) {
         console.log('fizz');
       } else if (!cinc) {
         console.log('buzz');
